@@ -1,0 +1,14 @@
+
+<form style="margin:5%">
+    <h3>Редактирование записей</h3>
+    <input class="form-control" type="number" placeholder="Введите id сотрудника" [(ngModel)]="idnew" name="idnew"/>
+    <input class="form-control" type="text" placeholder="Введите измененное имя" [(ngModel)]="namenew" name="namenew"/>
+    <input class="form-control" type="text" placeholder="Введите измененную фамилию" [(ngModel)]="surnamenew" name="surnamenew"/>
+    <select class="custom-select" [(ngModel)]="type" name="type">
+      <option [ngValue]="myWorkerType.programmer">Программист</option>
+      <option [ngValue]="myWorkerType.designer">Дизайнер</option>
+      <option [ngValue]="myWorkerType.copywriter">Рекламщик</option>
+      <option [ngValue]="myWorkerType.manager">Менеджер</option>
+    </select>
+    <button class="form-control" (click)="onRedactWorker()">Редактировать</button>
+  </form>
